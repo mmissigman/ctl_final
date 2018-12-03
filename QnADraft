@@ -4,4 +4,16 @@ Once you have completed this form, you will be prompted to download 2 documents:
 A:That sounds great!
 	Q(1.1): Before we get started, please make sure you have: 1) Medical Certificate or Clinical Team Report (link), 2) Address, date of birth, and information about the incapacitated individual (from here on our, we will refer to them as "Respondent"), and 3) Names and addresses of any other interested individuals.
 	A: I have that information, let's get started!
-		Q:
+		Q(1.1.1): Why are you or the proposed guardian interested in the appointment for guardian?
+		X:
+			Q(1.1.1.1): Are you or the proposed guardian:
+			A: Nominated in a durable power of attorney by Respondent
+			A: Respondent's parent or a parental nominee
+			A: Respondent's spouse or spousal nominee
+			A: None of the above
+				Q(1.1.1.1.4): If none of the above, why should the proposed guardian be appointed?
+				X:
+					Q: Are you interested in a limited or general guardianship?
+					A: Limited Guardianship (allows the Respondent to participate in decision making to the extend they are able. May be limited to certain decisions, such as medical decisions or where to live) See Exhibit A Guardianship Limitations (link)
+					A: General Guardianship (Guardian has full authority over 
+					A: I'm not sure
