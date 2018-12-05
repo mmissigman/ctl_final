@@ -13,9 +13,19 @@ Q(1): Before we get started, please make sure you have: <br>1) <a href="https://
 A: I have that information, let's get started!
 	Q(1.1): Has the Respondent lived in Massachusetts for the past <b>six months</b>?
 	A: Yes 
-		Q(1.1.1):GOTO:Interest
+		Q(1.1.1): Is the Respondent able to understand, make and communicate (even with help) decisions about his/her health, safety and well-being on his/her own?
+		A: Yes
+			Q(1.1.1.1): A guardianship may not be the right option for you. It is a requirement that the Respondent is unable to make these decisions in order to receive a guardianship. For more information, see <a href="https://www.mass.gov/files/documents/2016/08/ug/mpc190-general-information.pdf" target="_blank">general information regarding Guardianships and Conservatorships</a>.
+		A: No
+			Q(1.1.1.2): Is the Respondent able to make financial decisions on his/her own?
+			A: Yes
+				Q(1.1.1.2.1):GOTO:Interest
+			A: No
+				Q(1.1.1.2.2): If the Respondent receives yearly income and assets from any source, a guardianship may not be the right legal option. You should consult a lawyer for assistance with a "conservatorship." However, If the Respondent is only receiving Supplemental Security Income (SSI) benefits, you won't need a conservatorship. For more information on conservatorships, see <a href="https://www.mass.gov/files/documents/2016/08/ug/mpc190-general-information.pdf" target="_blank">general information regarding Guardianships and Conservatorships</a>. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
+				A: Thanks, I want to continue with the Adult Guardianship Petition.
+					Q(1.1.1.2.2.1):GOTO:Interest
 	A: No
-		Q(1.1.2): You should consult with an attorney about your situation. Massachusetts might not be the right state for guardianship. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association website <a href="http://www.massguardianshipassociation.org/" target="_blank">here</a>.
+		Q(1.1.2): You should consult with an attorney about your situation. Massachusetts might not be the right state for guardianship. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
 
 
 Q(Interest): Why are you or the proposed guardian interested in the appointment for guardian? (Please explain in 1-3 sentences)
@@ -34,21 +44,46 @@ X:
 			A: Yes
 				Q(2.1.4.1.1): Please fill out and print the Exhibit A <a href="https://www.mass.gov/files/documents/2016/08/xf/mpc720a-exhibit-a-limitations-guardianship-fill.pdf" target="_blank">Limitations to Guardianship</a> so that you may add this to your Guardianship petition. Add any additional decisions that the Respondent can or cannot make to that form.
 				A: I will do that, thanks!
+					Q(2.1.4.1.1.1):GOTO:Contest
 			A: No
 				Q(2.1.4.1.2): Why is a limited guardianship inappropriate? (Please explain in 1-3 sentences)
 				X:
-					Q(2.1.4.1.2.1):GOTO:IDisability
+					Q(2.1.4.1.2.1):GOTO:Contest
+					
+					
+Q(Contest): Will the Respondent agree to a guardianship?
+A: Yes
+	Q(HCP): Does the Respondent have a Health Care Proxy? (A "Health Care Proxy" is a document that names someone to make health care decisions for them if they are unable. If the Respondent has been to a hospital recently, it is likely that they had to fill out this type of document.)
+	A: Yes
+		Q(3.1.1): You will need to print and attach the Health Care Proxy document to the Petition when you file it with the court. Once you download the Guardianship Petition at the end of this interview, you will also need to add their full name, address, and contact information to page 3 of the Petition.
+		A: Will do. 
+			Q(3.1.1.1):GOTO:RPayee
+	A: No
+		Q(RPayee): Does the Respondent have a Representative Payee? (A "Representative Payee" is a person who the Respondent's social security disability income check is written to)
+		A: Yes
+			Q: Once you download the Guardianship Petition at the end of this interview, you will need to add the Representative Payee's full name, address, and contact information to page 3 of the Petition.
+		A: No
+	
+A: No
+	Q(3.2): The guardianship may be "contested," which means that both sides don't agree and the proposed guardian may not receive guardianship right away. You can continue with this online interview, but you may want to seek help from an attorney. The Respondent may get their own attorney appointed by the court. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
+	A: I'll keep that in mind.
+		Q(3.2.1):GOTO:HCP
+A: I don't know
+	Q(3.3): You can continue with this online interview, but be aware that, because the Respondent may not agree with the petition, it may be "contested." This means that both sides don't agree and the proposed guardian may not receive guardianship right away. You may want to consult with an attorney about this. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
+	A: I'll keep that in mind.
+		Q(3.3.1):GOTO:HCP
 
 Q(IDisability): Is the Respondent intellectually disabled? (formerly known as "mentally retarded" or "mentally handicapped") 
 A: Yes
-	Q(3.1): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/nc/mpc402-clinical-team-report-fill.pdf" target="_blank">Clinical Team Report</a> dated with an examination that took place within 180 days from the date you plan to file this Adult Guardianship Petition?
+	Q(4.1): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/nc/mpc402-clinical-team-report-fill.pdf" target="_blank">Clinical Team Report</a> dated with an examination that took place within 180 days from the date you plan to file this Adult Guardianship Petition?
 	A: Yes
-		Q(3.1.1): Great! You will need to file a Clinical Team Report with this Petition.
+		Q(4.1.1): Great! You will need to file a Clinical Team Report with this Petition.
 	A: No
-		Q(3.1.2): That is OK. You can still complete this interview, but you will need a Clinical Team Report before you can file the Petition.
+		Q(4.1.2): That is OK. You can still complete this interview, but you will need a Clinical Team Report before you can file the Petition.
 A: No
-	Q(3.2): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/xn/mpc400-medical-certificate-guardianship-or-conservatorship-fillable-2010.pdf" target="_blank">Medical Certificate</a> dated with an examination that took place within 30 days of the time you plan to file this Adult Guardianship Petition?
+	Q(4.2): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/xn/mpc400-medical-certificate-guardianship-or-conservatorship-fillable-2010.pdf" target="_blank">Medical Certificate</a> dated with an examination that took place within 30 days of the time you plan to file this Adult Guardianship Petition?
 	A: Yes
-		Q(3.2.1): Great! You will need to file a Medical Certificate with this Petition.
+		Q(4.2.1): Great! You will need to file a Medical Certificate with this Petition.
 	A: No
-		Q(3.2.2): That is OK. You can still complete this interview, but you will need a Medical Certificate before you can file the Petition. 
+		Q(4.2.2): That is OK. You can still complete this interview, but you will need a Medical Certificate before you can file the Petition. 
+
