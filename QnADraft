@@ -1,19 +1,25 @@
-Q(1): This interview will help you fill out a "Petition for Appointment of Guardian for an Incapacitated Person." This interview will assist you in beginning the process of appointing a guardianship for an incapacitated loved one. Answering these questions should take approximately 30-45 minutes to complete.
+Title: Petition for Appointment of Guardian for an Incapacitated Person
+Author: Michelle Missigman
+Before:<link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">Interview Assistant for a Petition for Appointment of a Guardian for an Incapacitated Person</h2>
+<p><b>Please Note: This interview just helps you prepare the petition. It does not give you any legal rights. You will need to file these documents with the court and a judge will make the decisions about your case.</b></p>
+<p>This interview will help you fill out a "Petition for Appointment of Guardian for an Incapacitated Person" and assist you in beginning the process of appointing a guardianship for an incapacitated loved one. See a sample of the petition <a href="https://www.mass.gov/files/documents/2016/08/vf/mpc120-petition-for-appointment-of-guardian-adult-fill.pdf" target="_blank">here</a>.
+<br><br>Answering these questions should take approximately 30-45 minutes to complete. Once you have completed this interview, you will be prompted to download two documents: 1) a partially completed Adult Guardianship Petition, and 2) a summary of what your next steps will be. </p>
 
-Once you have completed this form, you will be prompted to download 2 documents: 1) a completed Adult Guardianship Petition, and 2) a summary of what your next steps will be.
-A:That sounds great!
-	Q(1.1): Before we get started, please make sure you have: 1) Medical Certificate or Clinical Team Report (link), 2) Address, date of birth, and information about the incapacitated individual (from here on our, we will refer to them as "Respondent"), and 3) Names and addresses of any other interested individuals.
-	A: I have that information, let's get started!
-		Q(1.1.1): Why are you or the proposed guardian interested in the appointment for guardian?
-		X:
-			Q(1.1.1.1): Are you or the proposed guardian:
-			A: Nominated in a durable power of attorney by Respondent
-			A: Respondent's parent or a parental nominee
-			A: Respondent's spouse or spousal nominee
-			A: None of the above
-				Q(1.1.1.1.4): If none of the above, why should the proposed guardian be appointed?
-				X:
-					Q: Are you interested in a limited or general guardianship?
-					A: Limited Guardianship (allows the Respondent to participate in decision making to the extend they are able. May be limited to certain decisions, such as medical decisions or where to live) See Exhibit A Guardianship Limitations (link)
-					A: General Guardianship (Guardian has full authority over 
-					A: I'm not sure
+
+Q(1): Before we get started, please make sure you have: <br>1) <a href="https://www.mass.gov/files/documents/2016/08/xn/mpc400-medical-certificate-guardianship-or-conservatorship-fillable-2010.pdf" target="_blank">Medical Certificate</a> or <a href="https://www.mass.gov/files/documents/2016/08/nc/mpc402-clinical-team-report-fill.pdf" target="_blank">Clinical Team Report</a>, <br>2) Address, date of birth, and information about the incapacitated individual (from here on our, we will refer to them as "Respondent"), and <br>3) Names and addresses of any other interested individuals.
+A: I have that information, let's get started!
+	Q(1.1): Why are you or the proposed guardian interested in the appointment for guardian?
+	X:
+		Q(1.1.1): Are you or the proposed guardian:
+		A: Nominated in a durable power of attorney by Respondent
+		A: Respondent's parent or a parental nominee
+		A: Respondent's spouse or spousal nominee
+		A: None of the above
+			Q(1.1.1.4): If none of the above, why should the proposed guardian be appointed?
+			X:
+				Q(1.1.1.4.1): Are you interested in a limited or general guardianship?
+				A: Limited Guardianship (allows the Respondent to participate in decision making to the extend they are able. May be limited to certain decisions, such as medical decisions or where to live) See Exhibit A Guardianship Limitations (link)
+				A: General Guardianship (Guardian has full authority over 
+				A: I'm not sure
