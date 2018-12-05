@@ -67,31 +67,85 @@ A: Yes
 		A: Yes
 			Q(3.1.2.1): Once you download the Guardianship Petition at the end of this interview, you will need to add the Representative Payee's full name, address, and contact information to page 3 of the Petition.
 			A: Will do. 
-				Q(3.1.2.1.1):GOTO:IDisability
+				Q(3.1.2.1.1):GOTO:VABenefits
 		A: No
-			Q(3.1.2.2):GOTO:IDisability
+			Q(3.1.2.2):GOTO:VABenefits
 	
 A: No
 	Q(3.2): The guardianship may be "contested," which means that both sides don't agree and the proposed guardian may not receive guardianship right away. You can continue with this online interview, but you may want to seek help from an attorney. The Respondent may get their own attorney appointed by the court. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
 	A: I'll keep that in mind.
 		Q(3.2.1):GOTO:HCP
 A: I don't know
-	Q(3.3): You can continue with this online interview, but be aware that, because the Respondent may not agree with the petition, it may be "contested." This means that both sides don't agree and the proposed guardian may not receive guardianship right away. You may want to consult with an attorney about this. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
+	Q(3.3): You can continue with this online interview, but be aware that it may be "contested" because the Respondent may not agree with the petition. This means that both sides don't agree and the proposed guardian may not receive guardianship right away. You may want to consult with an attorney about this. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
 	A: I'll keep that in mind.
 		Q(3.3.1):GOTO:HCP
 
+Q(VABenefits): Is the Respondent entitled to benefits from the Department of Veteran's Affairs?
+A: Yes
+	Q(4.1):GOTO:Assets
+A: No
+	Q(4.2):GOTO:Assets
+A: I don't know
+	Q(Assets): Does the Respondent have any assets? (e.g. bank accounts, property, valuables, pensions, retirements funds, etc.)
+	A: Yes
+		Q(AD1): Please provide a brief description of the first asset. Do not include names of institutions or bank account numbers, just the type of asset (e.g. bank account, property, insurance, pensions).
+		X:
+			Q(AV1): Please provide a value of the first asset. (How much money is this asset worth?)
+			X:
+				Q(A2): Does the Respondent have a second asset?
+				A: Yes
+					Q(AD2): Please provide a brief description of the second asset.  Do not include names of institutions or bank account numbers, just the type of asset (e.g. bank account, property, insurance, pensions).
+					X:
+						Q(AV2): Please provide a value of the second asset? (How much money is this asset worth?)
+						X:
+							Q(A3): Does the Respondent have three or more assets?
+							A: Yes
+								Q(AAttach): You should add an attachment to the Petition that provides additional information about the rest of the Respondent's assets.
+								A: OK
+									Q(ADG1):GOTO:AIncome
+							A: No
+								Q(ADG2):GOTO:AIncome
+				A: No
+					Q(ADG3):GOTO:AIncome
+	A: No
+		Q(4.3.2):GOTO:AIncome
+	A: I don't know
+		Q(AIncome): Does the Respondent have any anticipated income? (e.g. paychecks, social security, pension, long-term disability, etc.)
+		A: Yes
+			Q(AI1): Please provide the first source of income. Do not include sensitive information like account numbers, just the type of source. (e.g. paycheck, social security, etc.)
+			X:
+				Q(AIM1): Please provide a monthly estimate of the first source of income. (How much money does this person receive monthly from this income source?)
+				X:
+					Q(AItwo): Does the Respondent have a second source of income?
+					A: Yes
+						Q(AI2): Please provide the second source of income. Do not include sensitive information like account numbers, just the type of source. (e.g. paycheck, social security, etc.)
+						X:
+							Q(AIM2): Please provide a monthly estimate of the second source of income. (How much money does this person receive monthly from this income source?)
+							X:
+								Q(AI3): Does the Respondent have three or more sources of income?
+								A: Yes
+									Q(AIAttach): You should add an attachment to the Petition that provides additional information about the rest of the Respondent's sources of income.
+									A: OK
+										Q(4.3.3.1.1.1.1.1.1.1.1):GOTO:IDisability
+								A: No
+									Q(4.3.3.1.1.1.1.1.1.2):GOTO:IDisability
+					A: No
+						Q(4.3.3.1.1.1.2):GOTO:IDisability
+		A: No
+			Q(4.3.3.2):GOTO:IDisability
+		A: I don't know
+			Q(4.3.3.3):GOTO:IDisability
+
 Q(IDisability): Is the Respondent intellectually disabled? (formerly known as "mentally retarded" or "mentally handicapped") 
 A: Yes
-	Q(4.1): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/nc/mpc402-clinical-team-report-fill.pdf" target="_blank">Clinical Team Report</a> dated with an examination that took place within 180 days from the date you plan to file this Adult Guardianship Petition?
+	Q(5.1): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/nc/mpc402-clinical-team-report-fill.pdf" target="_blank">Clinical Team Report</a> dated with an examination that took place within 180 days from the date you plan to file this Adult Guardianship Petition?
 	A: Yes
-		Q(4.1.1): Great! You will need to file a Clinical Team Report with this Petition.
+		Q(5.1.1): Great! You will need to file a Clinical Team Report with this Petition.
 	A: No
-		Q(4.1.2): That is OK. You can still complete this interview, but you will need a Clinical Team Report before you can file the Petition.
+		Q(5.1.2): That is OK. You can still complete this interview, but you will need a Clinical Team Report before you can file the Petition.
 A: No
-	Q(4.2): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/xn/mpc400-medical-certificate-guardianship-or-conservatorship-fillable-2010.pdf" target="_blank">Medical Certificate</a> dated with an examination that took place within 30 days of the time you plan to file this Adult Guardianship Petition?
+	Q(5.2): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/xn/mpc400-medical-certificate-guardianship-or-conservatorship-fillable-2010.pdf" target="_blank">Medical Certificate</a> dated with an examination that took place within 30 days of the time you plan to file this Adult Guardianship Petition?
 	A: Yes
-		Q(4.2.1): Great! You will need to file a Medical Certificate with this Petition.
+		Q(5.2.1): Great! You will need to file a Medical Certificate with this Petition.
 	A: No
-		Q(4.2.2): That is OK. You can still complete this interview, but you will need a Medical Certificate before you can file the Petition. 
-
-
+		Q(5.2.2): That is OK. You can still complete this interview, but you will need a Medical Certificate before you can file the Petition. 
