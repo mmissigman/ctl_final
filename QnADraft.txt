@@ -5,10 +5,11 @@ Before:<link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/ho
 <h2 style="text-align:center;">Interview Assistant for a Petition for Appointment of a Guardian for an Incapacitated Person</h2>
 <p><b>Please Note: This interview just helps you prepare the petition. It does not give you any legal rights. You will need to file these documents with the court and a judge will make the decisions about your case.</b></p>
 <p>This interview will help you fill out a "Petition for Appointment of Guardian for an Incapacitated Person" and assist you in beginning the process of appointing a guardianship for an incapacitated loved one. See a sample of the petition <a href="https://www.mass.gov/files/documents/2016/08/vf/mpc120-petition-for-appointment-of-guardian-adult-fill.pdf" target="_blank">here</a>.
-<br><br>Answering these questions should take approximately 30-45 minutes to complete. Once you have completed this interview, you will be prompted to download two documents: 1) a partially completed Adult Guardianship Petition, and 2) a summary of what your next steps will be. </p>
+<br><br>Answering these questions should take approximately 30-45 minutes to complete. Once you have completed this interview, you will be prompted to download two documents: 1) a partially completed Adult Guardianship Petition, and 2) a summary of what your next steps will be. 
+<br><br> Also note that from here on out we will refer to the <b>incapacitated individual as "Respondent,"</b> as that is how they are referred to in all court documents. </p>
 
 
-Q(1): Before we get started, please make sure you have: <br>1) <a href="https://www.mass.gov/files/documents/2016/08/xn/mpc400-medical-certificate-guardianship-or-conservatorship-fillable-2010.pdf" target="_blank">Medical Certificate</a> or <a href="https://www.mass.gov/files/documents/2016/08/nc/mpc402-clinical-team-report-fill.pdf" target="_blank">Clinical Team Report</a>, <br>2) Address, date of birth, and information about the incapacitated individual (from here on out, we will refer to them as <b>"Respondent"</b>), and <br>3) Names and addresses of any other interested individuals (e.g. spouse, parents, siblings).
+Q(1): Before we get started, please make sure you have: <br>1) <a href="https://www.mass.gov/files/documents/2016/08/xn/mpc400-medical-certificate-guardianship-or-conservatorship-fillable-2010.pdf" target="_blank">Medical Certificate</a> (needed if Respondent <b>is not</b> intellectually disabled)  or <a href="https://www.mass.gov/files/documents/2016/08/nc/mpc402-clinical-team-report-fill.pdf" target="_blank">Clinical Team Report</a> (needed if Respondent <b>is</b> intellectually disabled), <br>2) Address, date of birth, and information about the Respondent, and <br>3) Names and addresses of any other interested individuals (e.g. spouse, parents, siblings).
 A: I have that information, let's get started!
 	Q(1.1): Has the Respondent lived in Massachusetts for the past <b>six months</b>?
 	A: Yes 
@@ -36,5 +37,5 @@ X:
 			A: No
 				Q(2.1.4.1.2): Why is a limited guardianship inappropriate? (Please explain in 1-3 sentences)
 				X:
-					Q(2.1.4.1.2.1): Med
+					Q(2.1.4.1.2.1): 
 <!-- need to figure out a better way to ask this question -->
