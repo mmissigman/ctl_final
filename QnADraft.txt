@@ -10,19 +10,31 @@ Before:<link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/ho
 
 Q(1): Before we get started, please make sure you have: <br>1) <a href="https://www.mass.gov/files/documents/2016/08/xn/mpc400-medical-certificate-guardianship-or-conservatorship-fillable-2010.pdf" target="_blank">Medical Certificate</a> or <a href="https://www.mass.gov/files/documents/2016/08/nc/mpc402-clinical-team-report-fill.pdf" target="_blank">Clinical Team Report</a>, <br>2) Address, date of birth, and information about the incapacitated individual (from here on out, we will refer to them as "Respondent"), and <br>3) Names and addresses of any other interested individuals (e.g. spouse, parents, siblings).
 A: I have that information, let's get started!
-	
-	Q(1.1): Why are you or the proposed guardian interested in the appointment for guardian? (Please explain in 1-3 sentences)
-	X:
-		Q(1.1.1): Are you or the proposed guardian:
-		A: Nominated in a durable power of attorney by Respondent
-			Q(1.1.1.1):GOTO:Limitations
-		A: Respondent's parent or a parental nominee
-			Q(1.1.1.2):GOTO:Limitations
-		A: Respondent's spouse or spousal nominee
-			Q(1.1.1.3):GOTO:Limitations
-		A: None of the above
-			Q(1.1.1.4): If none of the above, why should the proposed guardian be appointed? (Please explain in 1-3 sentences)
-			X:
-				Q(Limitations): Are there some decisions that the Respondent can make on their own? Please see the Exhibit A <a href="https://www.mass.gov/files/documents/2016/08/xf/mpc720a-exhibit-a-limitations-guardianship-fill.pdf" target="_blank">Guardianship Limitations</a> for examples of rights that the Respondent may retain.
-				A: Yes
-				A: No
+	Q(1.1): Has the Respondent lived in Massachusetts for the past six months?
+	A: Yes 
+		Q(1.1.1):GOTO:Interest
+	A: No
+		Q(1.1.2): You should consult with an attorney about your situation. Massachusetts might not be the right state for guardianship. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association website <a href="http://www.massguardianshipassociation.org/" target="_blank">here</a>.
+
+
+Q(Interest): Why are you or the proposed guardian interested in the appointment for guardian? (Please explain in 1-3 sentences)
+X:
+	Q(2.1): Are you or the proposed guardian:
+	A: Nominated in a durable power of attorney by Respondent
+		Q(2.1.1):GOTO:Limitations
+	A: Respondent's parent or a parental nominee
+		Q(2.1.2):GOTO:Limitations
+	A: Respondent's spouse or spousal nominee
+		Q(2.1.3):GOTO:Limitations
+	A: None of the above
+		Q(2.1.4): If none of the above, why should the proposed guardian be appointed? (Please explain in 1-3 sentences)
+		X:
+			Q(Limitations): Are there some decisions that the Respondent can make on their own? Please see the Exhibit A <a href="https://www.mass.gov/files/documents/2016/08/xf/mpc720a-exhibit-a-limitations-guardianship-fill.pdf" target="_blank">Limitations to Guardianship</a> for examples of rights that the Respondent may retain.
+			A: Yes
+				Q(2.1.4.1.1): Please fill out and print the Exhibit A <a href="https://www.mass.gov/files/documents/2016/08/xf/mpc720a-exhibit-a-limitations-guardianship-fill.pdf" target="_blank">Limitations to Guardianship</a> so that you may add this to your Guardianship petition. Add any additional decisions that the Respondent can or cannot make to that form.
+				A: I will do that, thanks!
+			A: No
+				Q(2.1.4.1.2): Why is a limited guardianship inappropriate? (Please explain in 1-3 sentences)
+				X:
+					Q(2.1.4.1.2.1): Med
+<!-- need to figure out a better way to ask this question -->
