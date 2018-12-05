@@ -19,11 +19,15 @@ A: I have that information, let's get started!
 		A: No
 			Q(1.1.1.2): Is the Respondent able to make financial decisions on his/her own?
 			A: Yes
-				Q(1.1.1.2.1):GOTO:Interest
+				Q(CAGuardian): Does the Respondent already have a court-appointed Guardian in Massachusetts or somewhere else?
+				A: Yes	
+					Q(1.1.1.2.1.1): Removing a current guardian, adding a co-guardian, or transferring a guardianship from another state is complicated and is beyond the scope of this online interview. You should contact an attorney for help with this case. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
+				A: No
+					Q(1.1.1.2.1.2):GOTO:Interest
 			A: No
 				Q(1.1.1.2.2): If the Respondent receives yearly income and assets from any source, a guardianship may not be the right legal option. You should consult a lawyer for assistance with a "conservatorship." However, If the Respondent is only receiving Supplemental Security Income (SSI) benefits, you won't need a conservatorship. For more information on conservatorships, see <a href="https://www.mass.gov/files/documents/2016/08/ug/mpc190-general-information.pdf" target="_blank">general information regarding Guardianships and Conservatorships</a>. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
 				A: Thanks, I want to continue with the Adult Guardianship Petition.
-					Q(1.1.1.2.2.1):GOTO:Interest
+					Q(1.1.1.2.2.1):GOTO:CAGuardian
 	A: No
 		Q(1.1.2): You should consult with an attorney about your situation. Massachusetts might not be the right state for guardianship. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
 
@@ -61,8 +65,11 @@ A: Yes
 	A: No
 		Q(RPayee): Does the Respondent have a Representative Payee? (A "Representative Payee" is a person who the Respondent's social security disability income check is written to)
 		A: Yes
-			Q: Once you download the Guardianship Petition at the end of this interview, you will need to add the Representative Payee's full name, address, and contact information to page 3 of the Petition.
+			Q(3.1.2.1): Once you download the Guardianship Petition at the end of this interview, you will need to add the Representative Payee's full name, address, and contact information to page 3 of the Petition.
+			A: Will do. 
+				Q(3.1.2.1.1):GOTO:IDisability
 		A: No
+			Q(3.1.2.2):GOTO:IDisability
 	
 A: No
 	Q(3.2): The guardianship may be "contested," which means that both sides don't agree and the proposed guardian may not receive guardianship right away. You can continue with this online interview, but you may want to seek help from an attorney. The Respondent may get their own attorney appointed by the court. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
@@ -86,4 +93,5 @@ A: No
 		Q(4.2.1): Great! You will need to file a Medical Certificate with this Petition.
 	A: No
 		Q(4.2.2): That is OK. You can still complete this interview, but you will need a Medical Certificate before you can file the Petition. 
+
 
