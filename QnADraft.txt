@@ -138,14 +138,41 @@ A: I don't know
 
 Q(IDisability): Is the Respondent intellectually disabled? (formerly known as "mentally retarded" or "mentally handicapped") 
 A: Yes
-	Q(5.1): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/nc/mpc402-clinical-team-report-fill.pdf" target="_blank">Clinical Team Report</a> dated with an examination that took place within 180 days from the date you plan to file this Adult Guardianship Petition?
+	Q(CTR): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/nc/mpc402-clinical-team-report-fill.pdf" target="_blank">Clinical Team Report</a> completed and dated with an examination that took place within 180 days from the date you plan to file this Adult Guardianship Petition?
 	A: Yes
-		Q(5.1.1): Great! You will need to file a Clinical Team Report with this Petition.
+		Q(CTRDescription): According to the Clinical Team Report, why is a guardianship necessary? (see paragraph 6.1C in the Clinical Team Report)
+		X:
+			Q(5.1.1.1): According to the Clinical Team Report, what is the nature and extent of the Respondent's alleged incapacity? (See paragraph 2 in the Clinical Team Report)
+			X:
+				Q(5.1.1.1.1):GOTO:CourtAuth
 	A: No
 		Q(5.1.2): That is OK. You can still complete this interview, but you will need a Clinical Team Report before you can file the Petition.
+		A: OK
+			Q(5.1.2.1):GOTO:CourtAuth
 A: No
-	Q(5.2): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/xn/mpc400-medical-certificate-guardianship-or-conservatorship-fillable-2010.pdf" target="_blank">Medical Certificate</a> dated with an examination that took place within 30 days of the time you plan to file this Adult Guardianship Petition?
+	Q(MC): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/xn/mpc400-medical-certificate-guardianship-or-conservatorship-fillable-2010.pdf" target="_blank">Medical Certificate</a> completed and dated with an examination that took place within 30 days of the time you plan to file this Adult Guardianship Petition?
 	A: Yes
-		Q(5.2.1): Great! You will need to file a Medical Certificate with this Petition.
+		Q(5.2.1): According to the Medical Certificate, why is a guardianship necessary? (see Paragraph 1A in the Medical Certificate)
+		X:
+			Q(5.2.1.1): According to the Medical Certificate, what is the nature and extent of the Respondent's alleged incapacity? (see paragraph 2 of the Medical Certificate)
+			X:
+				Q(5.2.1.1.1):GOTO:CourtAuth
 	A: No
 		Q(5.2.2): That is OK. You can still complete this interview, but you will need a Medical Certificate before you can file the Petition. 
+		A: OK
+			Q(5.2.2.1):GOTO:CourtAuth
+
+Q(CourtAuth): Do any of the following decisions need to be made for the Respondent? <br>(<a href="https://masshealthdruglist.ehs.state.ma.us/MHDL/pubtheradetail.do?id=24" target="_blank">Here</a> is a list of common antipsychotic medications)
+A: Admit Respondent to a nursing facility
+	Q(consult): You should consult an attorney because this authority is more complex and the Respondent might be appointed an attorney by the court. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>. <br> You will also need to fill out a Rogers Guardianship Petition in addition to the Adult Guardianship Petition. You can find instructions on how to apply for a Rogers Guardianship (<a href="https://www.mass.gov/files/documents/2016/08/wx/rogers-guardianship-booklet.pdf" target="_blank">here</a>.
+	A: OK, I'll look into a Rogers Guardianship. 
+		Q:GOTO:
+A: Treat Respondent with anti-psychotic medication
+	Q(6.2):GOTO:Consult
+A: Revoke the Health Care Proxy of Respondent
+	Q(6.3):GOTO:Consult
+A: I don't need to make any of the above decisions.
+	Q(6.4): How about any of the following decisions: <br>Admission to Nursing Home, <br>Experimental Treatment, <br> Electroshock Therapy, <br> Psychosurgery, <br> Stem Cell Transplant, <br> Removal of Life Support, <br> End-of-Life Decisions, <br> Life Sustaining Treatment, <br> Resuscitation, <br> Intubation, <br> Sterilization, <br> Amputation, <br> Abortion
+	A: Yes
+		Q:GOTO:Consult
+	A: No
