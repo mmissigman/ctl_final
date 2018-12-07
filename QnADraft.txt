@@ -1,7 +1,9 @@
 Title: Interview Assistant for a Petition for Appointment of a Guardian for an Incapacitated Person
 Author: Michelle Missigman
 Before:<link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
-<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<br><br>
+<br><br>
+<br><br>
 <h2 style="text-align:center;">Interview Assistant for a Petition for Appointment of a Guardian for an Incapacitated Person</h2>
 <p><b>Please Note: This interview just helps you prepare the petition. It does not give you any legal rights. You will need to file these documents with the court and a judge will make the decisions about your case.</b></p>
 <p>This interview will help you fill out a "Petition for Appointment of Guardian for an Incapacitated Person" and assist you in beginning the process of appointing a guardianship for an incapacitated loved one. See a sample of the petition <a href="https://www.mass.gov/files/documents/2016/08/vf/mpc120-petition-for-appointment-of-guardian-adult-fill.pdf" target="_blank">here</a>.
