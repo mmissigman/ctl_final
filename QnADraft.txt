@@ -129,7 +129,7 @@ A( ): I don't know
 		Q(4.3.2):GOTO:AIncome
 	A( ): I don't know
 		Q(AIncome): Does the Respondent have any anticipated income? (e.g. paychecks, social security, pension, long-term disability, etc.)
-		A(X): Yes
+		A( ): Yes
 			Q(I1): Please provide the first source of income. Do not include sensitive information like account numbers, just the type of source. (e.g. paycheck, social security, etc.)
 			X:
 				Q(IM1): Please provide a monthly estimate of the first source of income. (How much money does this person receive monthly from this income source?)
@@ -149,13 +149,13 @@ A( ): I don't know
 									Q(4.3.3.1.1.1.1.1.1.2):GOTO:IDisability
 					A: No
 						Q(4.3.3.1.1.1.2):GOTO:IDisability
-		A( ): No
+		A(X): No
 			Q(4.3.3.2):GOTO:IDisability
 		A( ): I don't know
 			Q(4.3.3.3):GOTO:IDisability
 
 Q(IDisability): Is the Respondent intellectually disabled? (formerly known as "mentally retarded" or "mentally handicapped") 
-A: Yes
+A(X): Yes
 	Q(CTR): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/nc/mpc402-clinical-team-report-fill.pdf" target="_blank">Clinical Team Report</a> completed and dated with an examination that took place within 180 days from the date you plan to file this Adult Guardianship Petition?
 	A: Yes
 		Q(CTRWhy): According to the Clinical Team Report, why is a guardianship necessary? (see paragraph 6.1C in the Clinical Team Report)
@@ -167,15 +167,15 @@ A: Yes
 		Q(5.1.2): That is OK. You can still complete this interview, but you will need a Clinical Team Report before you can file the Petition.
 		A: OK
 			Q(5.1.2.1):GOTO:CourtAuth
-A: No
+A( ): No
 	Q(MC): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/xn/mpc400-medical-certificate-guardianship-or-conservatorship-fillable-2010.pdf" target="_blank">Medical Certificate</a> completed and dated with an examination that took place within 30 days of the time you plan to file this Adult Guardianship Petition?
-	A: Yes
+	A(X): Yes
 		Q(MCWhy): According to the Medical Certificate, why is a guardianship necessary? (see Paragraph 1A in the Medical Certificate)
 		X:
 			Q(MCNature): According to the Medical Certificate, what is the nature and extent of the Respondent's alleged incapacity? (see paragraph 2 of the Medical Certificate)
 			X:
 				Q(5.2.1.1.1):GOTO:CourtAuth
-	A: No
+	A( ): No
 		Q(5.2.2): That is OK. You can still complete this interview, but you will need a Medical Certificate before you can file the Petition. 
 		A: OK
 			Q(5.2.2.1):GOTO:CourtAuth
