@@ -79,7 +79,7 @@ A: Yes
 	A( ): Yes
 		Q(HCP): You will need to print and attach the Health Care Proxy document to the Petition when you file it with the court. Once you download the Guardianship Petition at the end of this interview, you will also need to add their full name, address, and contact information to page 3 of the Petition.
 		A(X): Will do. 
-			Q(3.1.1.1):GOTO:RPayeeN
+			Q(3.1.1.1):GOTO:RPNo
 	A(X): No
 		Q(RPNo): Does the Respondent have a Representative Payee? (A "Representative Payee" is a person who the Respondent's social security disability income check is written to)
 		A( ): Yes
