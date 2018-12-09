@@ -52,15 +52,25 @@ X:
 			A( ): No
 				Q(PGA): If none of the above, why should the proposed guardian be appointed? (Please explain in 1-3 sentences)
 				X:
-					Q(GG): Are there some decisions that the Respondent can make on their own? Please see the Exhibit A <a href="https://www.mass.gov/files/documents/2016/08/xf/mpc720a-exhibit-a-limitations-guardianship-fill.pdf" target="_blank">Limitations to Guardianship</a> for examples of rights that the Respondent may retain.
-					A( ): Yes
-						Q(Limited): Please fill out and print the Exhibit A <a href="https://www.mass.gov/files/documents/2016/08/xf/mpc720a-exhibit-a-limitations-guardianship-fill.pdf" target="_blank">Limitations to Guardianship</a> so that you may add this to your Guardianship petition. Add any additional decisions that the Respondent can or cannot make to that form.
-						A(X): I will do that, thanks!
-							Q(2.1.2.2.2.1.1.1):GOTO:Contest
-					A(X): No
-						Q(LGInappropriate): Why is a limited guardianship inappropriate? (Please explain in 1-3 sentences)
-						X:
-							Q(2.1.2.2.2.1.2.1):GOTO:Contest
+					Q(4na): Great, now I'll ask some questions about the Respondent.
+					A(X): Sounds good.
+						Q(GG): Are there some decisions that the Respondent can make on their own? Please see the Exhibit A <a href="https://www.mass.gov/files/documents/2016/08/xf/mpc720a-exhibit-a-limitations-guardianship-fill.pdf" target="_blank">Limitations to Guardianship</a> for examples of rights that the Respondent may retain.
+						A( ): Yes
+							Q(5insurance): Do you need to apply for health insurance benefits, including MassHealth Benefits, on behalf of Respondent?
+							A(X): Yes
+								Q(2.1.2.2.2.1.1.1.1):GOTO:5records
+							A( ): No
+								Q(5records): Do you need to obtain copies of statements or any other records from banks, insurance companies, or other financial institutions verifying balances and transactions of accounts standing in the name of the Incapacitated Person, individually or jointly with another?
+								A(X): Yes
+									Q(2.1.2.2.2.1.1.1.2.1):GOTO:Limited
+								A( ): No
+									Q(Limited): Please take a look at the Exhibit A <a href="https://www.mass.gov/files/documents/2016/08/xf/mpc720a-exhibit-a-limitations-guardianship-fill.pdf" target="_blank">Limitations to Guardianship</a> so that you may fill out any other limitations to the guardianship. Print this out and add this to your Guardianship petition. Add any additional decisions that the Respondent can or cannot make to that form.
+									A(X): I will do that, thanks!
+										Q(2.1.2.2.2.1.1.1.2.2.1):GOTO:Contest
+						A(X): No
+							Q(LGInappropriate): Why is a limited guardianship inappropriate? (Please explain in 1-3 sentences)
+							X:
+								Q(2.1.2.2.2.1.1.2.1):GOTO:Contest
 					
 					
 Q(Contest): Will the Respondent agree to a guardianship?
@@ -96,15 +106,15 @@ A( ): No
 A( ): I don't know
 	Q(Assets): Does the Respondent have any assets? (e.g. bank accounts, property, valuables, pensions, retirements funds, etc.)
 	A(X): Yes
-		Q(AD1): Please provide a brief description of the first asset. Do not include names of institutions or bank account numbers, just the type of asset (e.g. bank account, property, insurance, pensions).
+		Q(D1): Please provide a brief description of the first asset. Do not include names of institutions or bank account numbers, just the type of asset (e.g. bank account, property, insurance, pensions).
 		X:
-			Q(AV1): Please provide a value of the first asset. (How much money is this asset worth?)
+			Q(V1): Please provide a value of the first asset. (How much money is this asset worth?)
 			X:
 				Q(A2): Does the Respondent have a second asset?
 				A: Yes
-					Q(AD2): Please provide a brief description of the second asset.  Do not include names of institutions or bank account numbers, just the type of asset (e.g. bank account, property, insurance, pensions).
+					Q(D2): Please provide a brief description of the second asset.  Do not include names of institutions or bank account numbers, just the type of asset (e.g. bank account, property, insurance, pensions).
 					X:
-						Q(AV2): Please provide a value of the second asset. (How much money is this asset worth?)
+						Q(V2): Please provide a value of the second asset. (How much money is this asset worth?)
 						X:
 							Q(A3): Does the Respondent have three or more assets?
 							A(X): Yes
@@ -120,9 +130,9 @@ A( ): I don't know
 	A( ): I don't know
 		Q(AIncome): Does the Respondent have any anticipated income? (e.g. paychecks, social security, pension, long-term disability, etc.)
 		A(X): Yes
-			Q(AI1): Please provide the first source of income. Do not include sensitive information like account numbers, just the type of source. (e.g. paycheck, social security, etc.)
+			Q(I1): Please provide the first source of income. Do not include sensitive information like account numbers, just the type of source. (e.g. paycheck, social security, etc.)
 			X:
-				Q(AIM1): Please provide a monthly estimate of the first source of income. (How much money does this person receive monthly from this income source?)
+				Q(IM1): Please provide a monthly estimate of the first source of income. (How much money does this person receive monthly from this income source?)
 				X:
 					Q(AItwo): Does the Respondent have a second source of income?
 					A: Yes
@@ -130,12 +140,12 @@ A( ): I don't know
 						X:
 							Q(AIM2): Please provide a monthly estimate of the second source of income. (How much money does this person receive monthly from this income source?)
 							X:
-								Q(AI3): Does the Respondent have three or more sources of income?
-								A: Yes
-									Q(AIAttach): You should add an attachment to the Petition that provides additional information about the rest of the Respondent's sources of income.
+								Q(I3): Does the Respondent have three or more sources of income?
+								A(X): Yes
+									Q(IAttach): You should add an attachment to the Petition that provides additional information about the rest of the Respondent's sources of income.
 									A: OK
 										Q(4.3.3.1.1.1.1.1.1.1.1):GOTO:IDisability
-								A: No
+								A( ): No
 									Q(4.3.3.1.1.1.1.1.1.2):GOTO:IDisability
 					A: No
 						Q(4.3.3.1.1.1.2):GOTO:IDisability
@@ -189,8 +199,9 @@ A( ): I don't need to make any of the above decisions.
 		Q(SJDList): Which one(s)?
 		X:
 			Q(6.4.1.1): You should consult an attorney because this authority is more complex and the Respondent might be appointed an attorney by the court. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>. <br><br> You will also need to fill out a Rogers Guardianship Petition in addition to the Adult Guardianship Petition. You can find instructions on how to apply for a Rogers Guardianship <a href="https://www.mass.gov/files/documents/2016/08/wx/rogers-guardianship-booklet.pdf" target="_blank">here</a>.
-	A(X): OK, I'll look into a Rogers Guardianship. I still want to finish this Adult Guardianship Petition.
-		Q(6.4.2):GOTO:Done
+			A: OK, I'll look into a Rogers Guardianship. I still want to finish this Adult Guardianship Petition.
+				Q(6.4.1.1.1):GOTO:Done
 	A( ): No
 		Q(Done): Great! Your Petition is ready to be downloaded. 
 		A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Download Petition
+© 2018 GitHub, Inc.
