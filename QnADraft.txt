@@ -22,9 +22,9 @@ A: I have that information, let's get started!
 			Q(1.1.1.2): Is the Respondent able to make financial decisions on his/her own?
 			A: Yes
 				Q(CAGuardian): Does the Respondent already have a court-appointed Guardian in Massachusetts or somewhere else?
-				A: Yes	
+				A( ): Yes	
 					Q(1.1.1.2.1.1): Removing a current guardian, adding a co-guardian, or transferring a guardianship from another state is complicated and is beyond the scope of this online interview. You should contact an attorney for help with this case. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
-				A: No
+				A(X): No
 					Q(1.1.1.2.1.2):GOTO:Interest
 			A: No
 				Q(1.1.1.2.2): If the Respondent receives yearly income and assets from any source, a guardianship may not be the right legal option. You should consult a lawyer for assistance with a "conservatorship." However, If the Respondent is only receiving Supplemental Security Income (SSI) benefits, you won't need a conservatorship. For more information on conservatorships, see <a href="https://www.mass.gov/files/documents/2016/08/ug/mpc190-general-information.pdf" target="_blank">general information regarding Guardianships and Conservatorships</a>. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
@@ -36,60 +36,64 @@ A: I have that information, let's get started!
 
 Q(Interest): Why are you or the proposed guardian interested in the appointment for guardian? (Please explain in 1-3 sentences)
 X:
-	Q(2.1): Are you or the proposed guardian:
-	A: Nominated in a durable power of attorney by Respondent
-		Q(2.1.1):GOTO:Limitations
-	A: Respondent's parent or a parental nominee
-		Q(2.1.2):GOTO:Limitations
-	A: Respondent's spouse or spousal nominee
-		Q(2.1.3):GOTO:Limitations
-	A: None of the above
-		Q(2.1.4): If none of the above, why should the proposed guardian be appointed? (Please explain in 1-3 sentences)
-		X:
-			Q(Limitations): Are there some decisions that the Respondent can make on their own? Please see the Exhibit A <a href="https://www.mass.gov/files/documents/2016/08/xf/mpc720a-exhibit-a-limitations-guardianship-fill.pdf" target="_blank">Limitations to Guardianship</a> for examples of rights that the Respondent may retain.
-			A: Yes
-				Q(2.1.4.1.1): Please fill out and print the Exhibit A <a href="https://www.mass.gov/files/documents/2016/08/xf/mpc720a-exhibit-a-limitations-guardianship-fill.pdf" target="_blank">Limitations to Guardianship</a> so that you may add this to your Guardianship petition. Add any additional decisions that the Respondent can or cannot make to that form.
-				A: I will do that, thanks!
-					Q(2.1.4.1.1.1):GOTO:Contest
-			A: No
-				Q(2.1.4.1.2): Why is a limited guardianship inappropriate? (Please explain in 1-3 sentences)
+	Q(GPOA): Is the proposed guardian nominated in a durable power of attorney by Respondent?
+	A(X): Yes
+		Q(2.1.1):GOTO:GG
+	A( ): No
+		Q(Parent): Is the proposed guardian Respondent's parent or a parental nominee
+		A(X): Yes
+			Q(2.1.2.1):GOTO:GG
+		A( ): No
+			Q(Spouse): Is the proposed guardian Respondent's spouse or spousal nominee?
+			A(X): Yes
+				Q(2.1.2.2.1):GOTO:GG
+			A( ): No
+				Q(PGA): If none of the above, why should the proposed guardian be appointed? (Please explain in 1-3 sentences)
 				X:
-					Q(2.1.4.1.2.1):GOTO:Contest
+					Q(GG): Are there some decisions that the Respondent can make on their own? Please see the Exhibit A <a href="https://www.mass.gov/files/documents/2016/08/xf/mpc720a-exhibit-a-limitations-guardianship-fill.pdf" target="_blank">Limitations to Guardianship</a> for examples of rights that the Respondent may retain.
+					A( ): Yes
+						Q(Limited): Please fill out and print the Exhibit A <a href="https://www.mass.gov/files/documents/2016/08/xf/mpc720a-exhibit-a-limitations-guardianship-fill.pdf" target="_blank">Limitations to Guardianship</a> so that you may add this to your Guardianship petition. Add any additional decisions that the Respondent can or cannot make to that form.
+						A(X): I will do that, thanks!
+							Q(2.1.2.2.2.1.1.1):GOTO:Contest
+					A(X): No
+						Q(LGInappropriate): Why is a limited guardianship inappropriate? (Please explain in 1-3 sentences)
+						X:
+							Q(2.1.2.2.2.1.2.1):GOTO:Contest
 					
 					
 Q(Contest): Will the Respondent agree to a guardianship?
 A: Yes
-	Q(HCP): Does the Respondent have a Health Care Proxy? (A "Health Care Proxy" is a document that names someone to make health care decisions for them if they are unable. If the Respondent has been to a hospital recently, it is likely that they had to fill out this type of document.)
-	A: Yes
-		Q(3.1.1): You will need to print and attach the Health Care Proxy document to the Petition when you file it with the court. Once you download the Guardianship Petition at the end of this interview, you will also need to add their full name, address, and contact information to page 3 of the Petition.
-		A: Will do. 
-			Q(3.1.1.1):GOTO:RPayee
-	A: No
-		Q(RPayee): Does the Respondent have a Representative Payee? (A "Representative Payee" is a person who the Respondent's social security disability income check is written to)
-		A: Yes
-			Q(3.1.2.1): Once you download the Guardianship Petition at the end of this interview, you will need to add the Representative Payee's full name, address, and contact information to page 3 of the Petition.
-			A: Will do. 
+	Q(HCPNo): Does the Respondent have a Health Care Proxy? (A "Health Care Proxy" is a document that names someone to make health care decisions for them if they are unable. If the Respondent has been to a hospital recently, it is likely that they had to fill out this type of document.)
+	A( ): Yes
+		Q(HCP): You will need to print and attach the Health Care Proxy document to the Petition when you file it with the court. Once you download the Guardianship Petition at the end of this interview, you will also need to add their full name, address, and contact information to page 3 of the Petition.
+		A(X): Will do. 
+			Q(3.1.1.1):GOTO:RPayeeN
+	A(X): No
+		Q(RPayeeN): Does the Respondent have a Representative Payee? (A "Representative Payee" is a person who the Respondent's social security disability income check is written to)
+		A( ): Yes
+			Q(RPayee): Once you download the Guardianship Petition at the end of this interview, you will need to add the Representative Payee's full name, address, and contact information to page 3 of the Petition.
+			A(X): Will do. 
 				Q(3.1.2.1.1):GOTO:VABenefits
-		A: No
+		A(X): No
 			Q(3.1.2.2):GOTO:VABenefits
 	
 A: No
 	Q(3.2): The guardianship may be "contested," which means that both sides don't agree and the proposed guardian may not receive guardianship right away. You can continue with this online interview, but you may want to seek help from an attorney. The Respondent may get their own attorney appointed by the court. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
 	A: I'll keep that in mind.
-		Q(3.2.1):GOTO:HCP
+		Q(3.2.1):GOTO:HCPNo
 A: I don't know
 	Q(3.3): You can continue with this online interview, but be aware that it may be "contested" because the Respondent may not agree with the petition. This means that both sides don't agree and the proposed guardian may not receive guardianship right away. You may want to consult with an attorney about this. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
 	A: I'll keep that in mind.
-		Q(3.3.1):GOTO:HCP
+		Q(3.3.1):GOTO:HCPNo
 
 Q(VABenefits): Is the Respondent entitled to benefits from the Department of Veteran's Affairs?
-A: Yes
+A(X): Yes
 	Q(4.1):GOTO:Assets
-A: No
+A( ): No
 	Q(4.2):GOTO:Assets
-A: I don't know
+A( ): I don't know
 	Q(Assets): Does the Respondent have any assets? (e.g. bank accounts, property, valuables, pensions, retirements funds, etc.)
-	A: Yes
+	A(X): Yes
 		Q(AD1): Please provide a brief description of the first asset. Do not include names of institutions or bank account numbers, just the type of asset (e.g. bank account, property, insurance, pensions).
 		X:
 			Q(AV1): Please provide a value of the first asset. (How much money is this asset worth?)
@@ -98,22 +102,22 @@ A: I don't know
 				A: Yes
 					Q(AD2): Please provide a brief description of the second asset.  Do not include names of institutions or bank account numbers, just the type of asset (e.g. bank account, property, insurance, pensions).
 					X:
-						Q(AV2): Please provide a value of the second asset? (How much money is this asset worth?)
+						Q(AV2): Please provide a value of the second asset. (How much money is this asset worth?)
 						X:
 							Q(A3): Does the Respondent have three or more assets?
-							A: Yes
+							A(X): Yes
 								Q(AAttach): You should add an attachment to the Petition that provides additional information about the rest of the Respondent's assets.
 								A: OK
 									Q(ADG1):GOTO:AIncome
-							A: No
+							A( ): No
 								Q(ADG2):GOTO:AIncome
 				A: No
 					Q(ADG3):GOTO:AIncome
-	A: No
+	A( ): No
 		Q(4.3.2):GOTO:AIncome
-	A: I don't know
+	A( ): I don't know
 		Q(AIncome): Does the Respondent have any anticipated income? (e.g. paychecks, social security, pension, long-term disability, etc.)
-		A: Yes
+		A(X): Yes
 			Q(AI1): Please provide the first source of income. Do not include sensitive information like account numbers, just the type of source. (e.g. paycheck, social security, etc.)
 			X:
 				Q(AIM1): Please provide a monthly estimate of the first source of income. (How much money does this person receive monthly from this income source?)
@@ -133,18 +137,18 @@ A: I don't know
 									Q(4.3.3.1.1.1.1.1.1.2):GOTO:IDisability
 					A: No
 						Q(4.3.3.1.1.1.2):GOTO:IDisability
-		A: No
+		A( ): No
 			Q(4.3.3.2):GOTO:IDisability
-		A: I don't know
+		A( ): I don't know
 			Q(4.3.3.3):GOTO:IDisability
 
 Q(IDisability): Is the Respondent intellectually disabled? (formerly known as "mentally retarded" or "mentally handicapped") 
 A: Yes
 	Q(CTR): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/nc/mpc402-clinical-team-report-fill.pdf" target="_blank">Clinical Team Report</a> completed and dated with an examination that took place within 180 days from the date you plan to file this Adult Guardianship Petition?
 	A: Yes
-		Q(CTRDescription): According to the Clinical Team Report, why is a guardianship necessary? (see paragraph 6.1C in the Clinical Team Report)
+		Q(CTRWhy): According to the Clinical Team Report, why is a guardianship necessary? (see paragraph 6.1C in the Clinical Team Report)
 		X:
-			Q(5.1.1.1): According to the Clinical Team Report, what is the nature and extent of the Respondent's alleged incapacity? (See paragraph 2 in the Clinical Team Report)
+			Q(CTRNature): According to the Clinical Team Report, what is the nature and extent of the Respondent's alleged incapacity? (See paragraph 2 in the Clinical Team Report)
 			X:
 				Q(5.1.1.1.1):GOTO:CourtAuth
 	A: No
@@ -154,9 +158,9 @@ A: Yes
 A: No
 	Q(MC): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/xn/mpc400-medical-certificate-guardianship-or-conservatorship-fillable-2010.pdf" target="_blank">Medical Certificate</a> completed and dated with an examination that took place within 30 days of the time you plan to file this Adult Guardianship Petition?
 	A: Yes
-		Q(5.2.1): According to the Medical Certificate, why is a guardianship necessary? (see Paragraph 1A in the Medical Certificate)
+		Q(MCWhy): According to the Medical Certificate, why is a guardianship necessary? (see Paragraph 1A in the Medical Certificate)
 		X:
-			Q(5.2.1.1): According to the Medical Certificate, what is the nature and extent of the Respondent's alleged incapacity? (see paragraph 2 of the Medical Certificate)
+			Q(MCNature): According to the Medical Certificate, what is the nature and extent of the Respondent's alleged incapacity? (see paragraph 2 of the Medical Certificate)
 			X:
 				Q(5.2.1.1.1):GOTO:CourtAuth
 	A: No
@@ -165,20 +169,26 @@ A: No
 			Q(5.2.2.1):GOTO:CourtAuth
 
 Q(CourtAuth): Do any of the following decisions need to be made for the Respondent? <br>(<a href="https://masshealthdruglist.ehs.state.ma.us/MHDL/pubtheradetail.do?id=24" target="_blank">Here</a> is a list of common antipsychotic medications)
-A: Admit Respondent to a nursing facility
-	Q(Consult): You should consult an attorney because this authority is more complex and the Respondent might be appointed an attorney by the court. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>. <br><br> You will also need to fill out a Rogers Guardianship Petition in addition to the Adult Guardianship Petition. You can find instructions on how to apply for a Rogers Guardianship <a href="https://www.mass.gov/files/documents/2016/08/wx/rogers-guardianship-booklet.pdf" target="_blank">here</a>.
-	A: OK, I'll look into a Rogers Guardianship. I still want to finish this Adult Guardianship Petition.
+A(X): Admit Respondent to a nursing facility
+	Q(Nursing): You should consult an attorney because this authority is more complex and the Respondent might be appointed an attorney by the court. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>. <br><br> You will also need to fill out a Rogers Guardianship Petition in addition to the Adult Guardianship Petition. You can find instructions on how to apply for a Rogers Guardianship <a href="https://www.mass.gov/files/documents/2016/08/wx/rogers-guardianship-booklet.pdf" target="_blank">here</a>.
+	A(X): OK, I'll look into a Rogers Guardianship. I still want to finish this Adult Guardianship Petition.
 		Q(6.1.1):GOTO:Done
-A: Treat Respondent with anti-psychotic medication
-	Q(6.2):GOTO:Consult
-A: Revoke the Health Care Proxy of Respondent
-	Q(6.3):GOTO:Consult
-A: I don't need to make any of the above decisions.
-	Q(6.4): How about any of the following decisions: <br>Admission to Nursing Home, <br>Experimental Treatment, <br> Electroshock Therapy, <br> Psychosurgery, <br> Stem Cell Transplant, <br> Removal of Life Support, <br> End-of-Life Decisions, <br> Life Sustaining Treatment, <br> Resuscitation, <br> Intubation, <br> Sterilization, <br> Amputation, <br> Abortion
-	A: Yes
-		Q(6.4.1): Which one(s)?
+A(X): Treat Respondent with anti-psychotic medication
+	Q(Meds): You should consult an attorney because this authority is more complex and the Respondent might be appointed an attorney by the court. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>. <br><br> You will also need to fill out a Rogers Guardianship Petition in addition to the Adult Guardianship Petition. You can find instructions on how to apply for a Rogers Guardianship <a href="https://www.mass.gov/files/documents/2016/08/wx/rogers-guardianship-booklet.pdf" target="_blank">here</a>.
+	A(X): OK, I'll look into a Rogers Guardianship. I still want to finish this Adult Guardianship Petition.
+		Q(6.2.1):GOTO:Done
+A(X): Revoke the Health Care Proxy of Respondent
+	Q(RHCP):You should consult an attorney because this authority is more complex and the Respondent might be appointed an attorney by the court. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>. <br><br> You will also need to fill out a Rogers Guardianship Petition in addition to the Adult Guardianship Petition. You can find instructions on how to apply for a Rogers Guardianship <a href="https://www.mass.gov/files/documents/2016/08/wx/rogers-guardianship-booklet.pdf" target="_blank">here</a>.
+	A(X): OK, I'll look into a Rogers Guardianship. I still want to finish this Adult Guardianship Petition.
+		Q(6.3.1):GOTO:Done
+A( ): I don't need to make any of the above decisions.
+	Q(SJD): How about any of the following decisions: <br>Admission to Nursing Home, <br>Experimental Treatment, <br> Electroshock Therapy, <br> Psychosurgery, <br> Stem Cell Transplant, <br> Removal of Life Support, <br> End-of-Life Decisions, <br> Life Sustaining Treatment, <br> Resuscitation, <br> Intubation, <br> Sterilization, <br> Amputation, <br> Abortion
+	A(X): Yes
+		Q(SJDList): Which one(s)?
 		X:
-			Q(6.4.1.1):GOTO:Consult
-	A: No
+			Q(6.4.1.1): You should consult an attorney because this authority is more complex and the Respondent might be appointed an attorney by the court. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>. <br><br> You will also need to fill out a Rogers Guardianship Petition in addition to the Adult Guardianship Petition. You can find instructions on how to apply for a Rogers Guardianship <a href="https://www.mass.gov/files/documents/2016/08/wx/rogers-guardianship-booklet.pdf" target="_blank">here</a>.
+	A(X): OK, I'll look into a Rogers Guardianship. I still want to finish this Adult Guardianship Petition.
+		Q(6.4.2):GOTO:Done
+	A( ): No
 		Q(Done): Great! Your Petition is ready to be downloaded. 
 		A: Download Petition
