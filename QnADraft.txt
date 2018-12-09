@@ -81,9 +81,9 @@ A: Yes
 		A(X): Will do. 
 			Q(3.1.1.1):GOTO:RPayeeN
 	A(X): No
-		Q(RPayeeN): Does the Respondent have a Representative Payee? (A "Representative Payee" is a person who the Respondent's social security disability income check is written to)
+		Q(RPNo): Does the Respondent have a Representative Payee? (A "Representative Payee" is a person who the Respondent's social security disability income check is written to)
 		A( ): Yes
-			Q(RPayee): Once you download the Guardianship Petition at the end of this interview, you will need to add the Representative Payee's full name, address, and contact information to page 3 of the Petition.
+			Q(RPYes): Once you download the Guardianship Petition at the end of this interview, you will need to add the Representative Payee's full name, address, and contact information to page 3 of the Petition.
 			A(X): Will do. 
 				Q(3.1.2.1.1):GOTO:VABenefits
 		A(X): No
@@ -130,15 +130,15 @@ A( ): I don't know
 	A( ): I don't know
 		Q(AIncome): Does the Respondent have any anticipated income? (e.g. paychecks, social security, pension, long-term disability, etc.)
 		A( ): Yes
-			Q(I1): Please provide the first source of income. Do not include sensitive information like account numbers, just the type of source. (e.g. paycheck, social security, etc.)
+			Q(Income): Please provide the first source of income. Do not include sensitive information like account numbers, just the type of source. (e.g. paycheck, social security, etc.)
 			X:
-				Q(IM1): Please provide a monthly estimate of the first source of income. (How much money does this person receive monthly from this income source?)
+				Q(IM): Please provide a monthly estimate of the first source of income. (How much money does this person receive monthly from this income source?)
 				X:
 					Q(AItwo): Does the Respondent have a second source of income?
 					A: Yes
-						Q(AI2): Please provide the second source of income. Do not include sensitive information like account numbers, just the type of source. (e.g. paycheck, social security, etc.)
+						Q(I2): Please provide the second source of income. Do not include sensitive information like account numbers, just the type of source. (e.g. paycheck, social security, etc.)
 						X:
-							Q(AIM2): Please provide a monthly estimate of the second source of income. (How much money does this person receive monthly from this income source?)
+							Q(IM2): Please provide a monthly estimate of the second source of income. (How much money does this person receive monthly from this income source?)
 							X:
 								Q(I3): Does the Respondent have three or more sources of income?
 								A(X): Yes
@@ -158,9 +158,9 @@ Q(IDisability): Is the Respondent intellectually disabled? (formerly known as "m
 A(X): Yes
 	Q(CTR): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/nc/mpc402-clinical-team-report-fill.pdf" target="_blank">Clinical Team Report</a> completed and dated with an examination that took place within 180 days from the date you plan to file this Adult Guardianship Petition?
 	A: Yes
-		Q(CTRWhy): According to the Clinical Team Report, why is a guardianship necessary? (see paragraph 6.1C in the Clinical Team Report)
+		Q(TRWhy): According to the Clinical Team Report, why is a guardianship necessary? (see paragraph 6.1C in the Clinical Team Report)
 		X:
-			Q(CTRNature): According to the Clinical Team Report, what is the nature and extent of the Respondent's alleged incapacity? (See paragraph 2 in the Clinical Team Report)
+			Q(TRNature): According to the Clinical Team Report, what is the nature and extent of the Respondent's alleged incapacity? (See paragraph 2 in the Clinical Team Report)
 			X:
 				Q(5.1.1.1.1):GOTO:CourtAuth
 	A: No
@@ -170,13 +170,14 @@ A(X): Yes
 A( ): No
 	Q(MC): Do you have a <a href="https://www.mass.gov/files/documents/2016/08/xn/mpc400-medical-certificate-guardianship-or-conservatorship-fillable-2010.pdf" target="_blank">Medical Certificate</a> completed and dated with an examination that took place within 30 days of the time you plan to file this Adult Guardianship Petition?
 	A(X): Yes
-		Q(MCWhy): According to the Medical Certificate, why is a guardianship necessary? (see Paragraph 1A in the Medical Certificate)
+		Q(CertWhy): According to the Medical Certificate, why is a guardianship necessary? (see Paragraph 1A in the Medical Certificate)
 		X:
-			Q(MCNature): According to the Medical Certificate, what is the nature and extent of the Respondent's alleged incapacity? (see paragraph 2 of the Medical Certificate)
+			Q(CertNature): According to the Medical Certificate, what is the nature and extent of the Respondent's alleged incapacity? (see paragraph 2 of the Medical Certificate)
 			X:
 				Q(5.2.1.1.1):GOTO:CourtAuth
 	A( ): No
-		Q(5.2.2): That is OK. You can still complete this interview, but you will need a Medical Certificate before you can file the Petition. 
+		Q(5.2.2): That is OK. You can still complete this interview, but you will need a Medical Certificate 
+before you can file the Petition. 
 		A: OK
 			Q(5.2.2.1):GOTO:CourtAuth
 
@@ -204,4 +205,3 @@ A( ): I don't need to make any of the above decisions.
 	A( ): No
 		Q(Done): Great! Your Petition is ready to be downloaded. 
 		A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Download Petition
-© 2018 GitHub, Inc.
