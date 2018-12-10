@@ -122,11 +122,11 @@ A( ): I don't know
 							A(X): Yes
 								Q(AAttach): You should add an attachment to the Petition that provides additional information about the rest of the Respondent's assets.
 								A: OK
-									Q(ADG1):GOTO:AIncome
+									Q(ADG1):GOTO:ICheck
 							A( ): No
-								Q(ADG2):GOTO:AIncome
+								Q(ADG2):GOTO:ICheck
 				A: No
-					Q(ADG3):GOTO:AIncome
+					Q(ADG3):GOTO:ICheck
 	A( ): No
 		Q(4.3.2):GOTO:AIncome
 	A( ): I don't know
