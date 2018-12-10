@@ -10,9 +10,6 @@ Before:<link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/ho
 <br><br>Answering these questions should take approximately 30-45 minutes to complete and you will not be able to save your answers mid-way through. Once you have completed this interview, you will be prompted to download two documents: 1) a partially completed Adult Guardianship Petition, and 2) a summary of what your next steps will be. 
 <br><br> Also note that from here on out we will refer to the <b>incapacitated individual as "Respondent,"</b> as that is how they are referred to in all court documents. </p>
 
-<input type="hidden" name="name" value="AdultGuardianshipPetition"/>
-<input type="hidden" name="docx_uri" value="https://mmissigman.github.io/ctl_final/AdultGuardianshipPetition.docx"/>
-
 Q(1): Before we get started, please make sure you have: <br>1) <a href="https://www.mass.gov/files/documents/2016/08/xn/mpc400-medical-certificate-guardianship-or-conservatorship-fillable-2010.pdf" target="_blank">Medical Certificate</a> (needed if Respondent <b>is not</b> intellectually disabled)  or <a href="https://www.mass.gov/files/documents/2016/08/nc/mpc402-clinical-team-report-fill.pdf" target="_blank">Clinical Team Report</a> (needed if Respondent <b>is</b> intellectually disabled), <br>2) Address, date of birth, and information about the Respondent, and <br>3) Names and addresses of any other interested individuals (e.g. spouse, parents, siblings).
 A: I have that information, let's get started!
 	Q(1.1): Has the Respondent lived in Massachusetts for the past <b>six months</b>?
@@ -207,5 +204,5 @@ A( ): I don't need to make any of the above decisions.
 	A( ): No
 		Q(Done): Great! Your Petition is ready to be downloaded. 
 		A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Download Petition
-			Q(6.4.2.1):<input type="hidden" name="docx_uri" value="https://mmissigman.github.io/ctl/AdultGuardianshipPetitionNextSteps.docx"/> Also, here is a document detailing the next steps you should take:
+			Q(6.4.2.1):<input type="hidden" name="docx_uri" value="https://mmissigman.github.io/ctl_final/AdultGuardianshipPetitionNextSteps.docx"/> Also, here is a document detailing the next steps you should take:
 			A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Download Next Steps
