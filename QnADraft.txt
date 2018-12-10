@@ -128,7 +128,7 @@ A( ): I don't know
 				A: No
 					Q(ADG3):GOTO:ICheck
 	A( ): No
-		Q(4.3.2):GOTO:AIncome
+		Q(4.3.2):GOTO:ICheck
 	A( ): I don't know
 		Q(ICheck): Does the Respondent have any anticipated income? (e.g. paychecks, social security, pension, long-term disability, etc.)
 		A( ): Yes
