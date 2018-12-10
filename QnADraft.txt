@@ -207,3 +207,5 @@ A( ): I don't need to make any of the above decisions.
 	A( ): No
 		Q(Done): Great! Your Petition is ready to be downloaded. 
 		A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Download Petition
+			Q:<input type="hidden" name="docx_uri" value="https://mmissigman.github.io/ctl/AdultGuardianshipPetitionNextSteps.docx"/> Also, here is a document detailing the next steps you should take:
+			A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Download Next Steps
