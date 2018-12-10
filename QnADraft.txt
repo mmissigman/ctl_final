@@ -67,6 +67,8 @@ X:
 									Q(Limited): Please take a look at the Exhibit A <a href="https://www.mass.gov/files/documents/2016/08/xf/mpc720a-exhibit-a-limitations-guardianship-fill.pdf" target="_blank">Limitations to Guardianship</a> so that you may fill out any other limitations to the guardianship. Print this out and add this to your Guardianship petition. Add any additional decisions that the Respondent can or cannot make to that form.
 									A(X): I will do that, thanks!
 										Q(2.1.2.2.2.1.1.1.2.2.1):GOTO:Contest
+									A( ): Actually, I don't want a limited guardianship.
+										Q(2.1.2.2.2.1.1.1.2.2.2):GOTO:LGInappropriate
 						A(X): No
 							Q(LGInappropriate): Why is a limited guardianship inappropriate? (Please explain in 1-3 sentences)
 							X:
@@ -106,9 +108,9 @@ A( ): No
 A( ): I don't know
 	Q(Assets): Does the Respondent have any assets? (e.g. bank accounts, property, valuables, pensions, retirements funds, etc.)
 	A(X): Yes
-		Q(D1): Please provide a brief description of the first asset. Do not include names of institutions or bank account numbers, just the type of asset (e.g. bank account, property, insurance, pensions).
+		Q(Desc): Please provide a brief description of the first asset. Do not include names of institutions or bank account numbers, just the type of asset (e.g. bank account, property, insurance, pensions).
 		X:
-			Q(V1): Please provide a value of the first asset. (How much money is this asset worth?)
+			Q(Value): Please provide a value of the first asset. (How much money is this asset worth?)
 			X:
 				Q(A2): Does the Respondent have a second asset?
 				A: Yes
@@ -128,7 +130,7 @@ A( ): I don't know
 	A( ): No
 		Q(4.3.2):GOTO:AIncome
 	A( ): I don't know
-		Q(AIncome): Does the Respondent have any anticipated income? (e.g. paychecks, social security, pension, long-term disability, etc.)
+		Q(ICheck): Does the Respondent have any anticipated income? (e.g. paychecks, social security, pension, long-term disability, etc.)
 		A( ): Yes
 			Q(Income): Please provide the first source of income. Do not include sensitive information like account numbers, just the type of source. (e.g. paycheck, social security, etc.)
 			X:
