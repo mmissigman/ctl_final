@@ -33,7 +33,7 @@ A: I have that information, let's get started!
 		Q(1.1.2): You should consult with an attorney about your situation. Massachusetts might not be the right state for guardianship. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>.
 
 
-Q(Interest): Why are you or the proposed guardian interested in the appointment for guardian? (Please explain in 1-3 sentences)
+Q(Interest): What is the basis for your interest in the welfare of the Respondent? (This could include the type of treatment/care Respondent needs, your relationship to Respondent, extent of Respondent's incapacity, etc.) <br><i>Please explain in 1-3 sentences</i>
 X:
 	Q(GPOA): Is the proposed guardian nominated in a durable power of attorney by Respondent?
 	A(X): Yes
@@ -47,7 +47,7 @@ X:
 			A(X): Yes
 				Q(2.1.2.2.1):GOTO:GG
 			A( ): No
-				Q(PGA): If none of the above, why should the proposed guardian be appointed? (Please explain in 1-3 sentences)
+				Q(PGA): If none of the above, why should the proposed guardian be appointed? <br><i>Please explain in 1-3 sentences</i>
 				X:
 					Q(4na): Great, now I'll ask some questions about the Respondent.
 					A(X): Sounds good.
@@ -67,7 +67,7 @@ X:
 									A( ): Actually, I don't want a limited guardianship.
 										Q(2.1.2.2.2.1.1.1.2.2.2):GOTO:LGInappropriate
 						A(X): No
-							Q(LGInappropriate): Why is a limited guardianship inappropriate? (Please explain in 1-3 sentences)
+							Q(LGInappropriate): Why is a limited guardianship inappropriate? <br><i>Please explain in 1-3 sentences</i>
 							X:
 								Q(2.1.2.2.2.1.1.2.1):GOTO:Contest
 					
