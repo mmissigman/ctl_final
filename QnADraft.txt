@@ -39,7 +39,7 @@ X:
 	A(X): Yes
 		Q(2.1.1):GOTO:GG
 	A( ): No
-		Q(Parent): Is the proposed guardian Respondent's parent or a parental nominee
+		Q(Parent): Is the proposed guardian Respondent's parent or a parental nominee?
 		A(X): Yes
 			Q(2.1.2.1):GOTO:GG
 		A( ): No
