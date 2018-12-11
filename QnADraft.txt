@@ -203,7 +203,11 @@ A( ): I don't need to make any of the above decisions.
 			A: OK, I'll look into a Rogers Guardianship. I still want to finish this Adult Guardianship Petition.
 				Q(6.4.1.1.1):GOTO:Done
 	A( ): No
-		Q(Done):<input type="hidden" name="AdultGuardianshipPetition.docx" value="https://mmissigman.github.io/ctl_final/AdultGuardianshipPetition.docx"/> Great! Your Petition is ready to be downloaded. 
+		Q(Done):<input type="hidden" name="docx_uri" value="https://mmissigman.github.io/ctl_final/AdultGuardianshipPetition.docx"/> Great! Your Petition is ready to be downloaded. 
 		A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Download Petition
-			Q(6.4.2.1):<input type="hidden" name="AGPNextSteps.docx" value="https://mmissigman.github.io/ctl_final/AdultGuardianshipPetitionNextSteps.docx"/> Also, here is a document detailing the next steps you should take:
+			Q(6.4.2.1):<input type="hidden" name="docx_uri" value="https://mmissigman.github.io/ctl_final/AdultGuardianshipPetitionNextSteps.docx"/> Also, here is a document detailing the next steps you should take:
 			A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Download Next Steps
+
+
+<input type="hidden" name="docx_uri" value="https://mmissigman.github.io/ctl/IndigencyCalc.Counsel.docx"/> Would you like to print out your results?
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]
