@@ -198,11 +198,11 @@ A( ): I don't need to make any of the above decisions.
 	A(X): Yes
 		Q(SJDList): Which one(s)?
 		X:
-			Q(6.4.1.1): You should consult an attorney because this authority is more complex and the Respondent might be appointed an attorney by the court. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>. <br><br> You will also need to fill out a Rogers Guardianship Petition in addition to the Adult Guardianship Petition. You can find instructions on how to apply for a Rogers Guardianship <a href="https://www.mass.gov/files/documents/2016/08/wx/rogers-guardianship-booklet.pdf" target="_blank">here</a>.
+			Q(6.4.1.1): You should consult an attorney because this authority is more complex and the Respondent might be appointed an attorney by the court. If you need help finding an attorney who specializes in this area, you can visit the Massachusetts Guardianship Association <a href="http://www.massguardianshipassociation.org/" target="_blank">website</a>. <br><br> You will also need to fill out paperwork in addition to the Adult Guardianship Petition. You can find instructions on how to apply for a Rogers Guardianship <a href="https://www.mass.gov/files/documents/2016/08/wx/rogers-guardianship-booklet.pdf" target="_blank">here</a>.
 			A: OK, I'll look into a Rogers Guardianship. I still want to finish this Adult Guardianship Petition.
 				Q(6.4.1.1.1):GOTO:Done
 	A( ): No
-		Q(Done): Great! Your Petition is ready to be downloaded. 
+		Q(Done):<input type="hidden" name="docx_uri" value="https://mmissigman.github.io/ctl_final/AdultGuardianshipPetition.docx"/> Great! Your Petition is ready to be downloaded. 
 		A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Download Petition
 			Q(6.4.2.1):<input type="hidden" name="docx_uri" value="https://mmissigman.github.io/ctl_final/AdultGuardianshipPetitionNextSteps.docx"/> Also, here is a document detailing the next steps you should take:
 			A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Download Next Steps
