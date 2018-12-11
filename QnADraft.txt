@@ -207,7 +207,3 @@ A( ): I don't need to make any of the above decisions.
 		A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Download Petition
 			Q(6.4.2.1):<input type="hidden" name="docx_uri" value="https://mmissigman.github.io/ctl_final/AdultGuardianshipPetitionNextSteps.docx"/> Also, here is a document detailing the next steps you should take:
 			A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Download Next Steps
-
-
-<input type="hidden" name="docx_uri" value="https://mmissigman.github.io/ctl/IndigencyCalc.Counsel.docx"/> Would you like to print out your results?
-A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]
