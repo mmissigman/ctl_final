@@ -205,5 +205,7 @@ A( ): I don't need to make any of the above decisions.
 	A( ): No
 		Q(Done):<input type="hidden" name="name" value="AdultGuardiashipPetition"/><input type="hidden" name="docx_uri" value="https://mmissigman.github.io/ctl_final/AdultGuardianshipPetition.docx"/> Great! Your Petition is ready to be downloaded. 
 		A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Download Petition
-			Q(6.4.2.1):<input type="hidden" name="name" value="AGPNextSteps"/><input type="hidden" name="docx_uri" value="https://mmissigman.github.io/ctl_final/AdultGuardianshipPetitionNextSteps.docx"/> Also, here is a document detailing the next steps you should take:
-			A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Download Next Steps
+			Q(6.4.2.1):GOTO:nextsteps
+
+Q(nextsteps):<input type="hidden" name="name" value="AGPNextSteps"/><input type="hidden" name="docx_uri" value="https://mmissigman.github.io/ctl_final/AdultGuardianshipPetitionNextSteps.docx"/> Also, here is a document detailing the next steps you should take:
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Download Next Steps
